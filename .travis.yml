@@ -8,13 +8,12 @@ services:
 script:
   - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
   - docker images
-  # - docker tag udagram-api-feed edwardmuss/udagram-api-feed:v1
-  # - docker tag udagram-api-user edwardmuss/udagram-api-user:v1
-  # - docker tag udagram-frontend edwardmuss/udagram-frontend:v1
-  # - docker push edwardmuss/udagram-api-feed:v1
-  - docker build -t udagram-api-user ./udagram-api-user
+  - docker tag udagram-api-feed edwardmuss/udagram-api-feed:v1
+  - docker tag udagram-api-user edwardmuss/udagram-api-user:v1
+  - docker tag udagram-frontend edwardmuss/udagram-frontend:v1
+  - docker push edwardmuss/udagram-api-feed:v1
   - docker push edwardmuss/udagram-api-user:v1
-  # - docker push edwardmuss/udagram-frontend:v1
+  - docker push edwardmuss/udagram-frontend:v1
 
 # deploy:
 #   provider: script
