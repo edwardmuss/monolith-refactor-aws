@@ -5,14 +5,14 @@ node_js":
 services:
   - docker
 
-before_install:
-  -docker images
-  - docker tag udagram-api-feed edwardmuss/udagram-api-feed:v1
-  - docker tag udagram-api-user edwardmuss/udagram-api-user:v1
-  - docker tag udagram-frontend edwardmuss/udagram-frontend:v1
-  - docker push edwardmuss/udagram-api-feed:v1
-  - docker push edwardmuss/udagram-api-user:v1
-  - docker push edwardmuss/udagram-frontend:v1
+# before_install:
+#   - docker images
+#   - docker tag udagram-api-feed edwardmuss/udagram-api-feed:v1
+#   - docker tag udagram-api-user edwardmuss/udagram-api-user:v1
+#   - docker tag udagram-frontend edwardmuss/udagram-frontend:v1
+#   - docker push edwardmuss/udagram-api-feed:v1
+#   - docker push edwardmuss/udagram-api-user:v1
+#   - docker push edwardmuss/udagram-frontend:v1
 
 deploy:
   provider: script
