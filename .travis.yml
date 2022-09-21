@@ -5,7 +5,8 @@ node_js":
 services:
   - docker
 
-# before_install:
+# script:
+#   - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 #   - docker images
 #   - docker tag udagram-api-feed edwardmuss/udagram-api-feed:v1
 #   - docker tag udagram-api-user edwardmuss/udagram-api-user:v1
