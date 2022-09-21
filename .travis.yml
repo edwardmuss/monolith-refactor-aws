@@ -7,7 +7,7 @@ services:
   - docker
 
 script:
-  - docker compose
+  - docker-compose
   - docker images
 
 deploy:
