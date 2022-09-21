@@ -1,0 +1,17 @@
+language: node_js
+node_js":
+  - 16.15
+  - 12.0
+
+services:
+  - docker
+
+script:
+  - docker compose
+  - docker images
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: main
