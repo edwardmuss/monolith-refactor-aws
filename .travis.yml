@@ -7,8 +7,8 @@ services:
   - docker
 
 script:
-  - docker-compose
-  - docker images
+  - docker image prune --all
+  - docker-compose -f docker-compose-build.yaml build --parallel
 
 deploy:
   provider: script
